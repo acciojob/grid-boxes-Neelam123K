@@ -1,1 +1,69 @@
 /*  your css code here. If applicable */
+body#grid {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr 1fr; /* Sidebar and 3 content columns */
+  grid-template-rows: 100px 200px 100px 100px 100px;
+  gap: 5px;
+  height: 100vh;
+  background-color: white;
+}
+
+#grid > div {
+  background-color: green;
+  color: white;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+/* Positioning grid items */
+#grid > div:nth-child(1) {
+  grid-column: 1 / -1;
+}
+
+#grid > div:nth-child(2) {
+  grid-row: 2 / 6;
+  grid-column: 1 / 2;
+}
+
+#grid > div:nth-child(3) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+#grid > div:nth-child(4) {
+  grid-column: 3 / 5;
+  grid-row: 2 / 3;
+}
+
+#grid > div:nth-child(5) {
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+}
+
+#grid > div:nth-child(6) {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+}
+
+#grid > div:nth-child(7) {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}
+
+#grid > div:nth-child(8) {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+}
+
+#grid > div:nth-child(9) {
+  grid-column: 4 / 5;
+  grid-row: 4 / 5;
+}
+
+#grid > div:nth-child(10) {
+  grid-column: 2 / 5;
+  grid-row: 5 / 6;
+}
